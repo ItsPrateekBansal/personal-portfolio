@@ -89,7 +89,7 @@ export default function Hero() {
             <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-purple-600 rounded-full blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 animate-pulse-slow"></div>
             <div className="relative h-72 w-72 sm:h-80 sm:w-80 overflow-hidden rounded-full border-2 border-background">
               <img
-                src="https://drive.google.com/uc?export=view&id=1exg-SdQ91HZsTGdhEpxMkzNGmCSLaxbR"
+                src='public\prateekimg.png'
                 alt="Prateek Bansal"
                 className="h-full w-full object-cover"
               />
