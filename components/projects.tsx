@@ -7,7 +7,21 @@ import { useInView } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
-const projects = [
+interface Project {
+  title: string
+  tagline: string
+  badge: string
+  badgeColor: string
+  icon: typeof Bot
+  description: string
+  details: string[]
+  stack: string[]
+  github: string | null
+  demo: string | null
+  architecture: string
+}
+
+const projects: Project[] = [
   {
     title: "CodeGuardian",
     tagline: "Autonomous On-Call Engineer",
@@ -118,7 +132,7 @@ const projects = [
   },
 ]
 
-function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
+function ProjectCard({ project, index }: { project: Project; index: number }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
   const [isHovered, setIsHovered] = useState(false)
