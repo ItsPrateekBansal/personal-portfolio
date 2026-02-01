@@ -202,12 +202,14 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 
         {/* Footer */}
         <div className="px-6 py-4 border-t border-border/50 flex items-center gap-3">
-          <Button variant="outline" size="sm" asChild className="group/btn border-primary/30 hover:border-primary hover:bg-primary/10">
-            <Link href={project.github} target="_blank">
-              <Github className="mr-2 h-4 w-4 transition-transform group-hover/btn:scale-110" />
-              View Code
-            </Link>
-          </Button>
+          {project.github && (
+            <Button variant="outline" size="sm" asChild className="group/btn border-primary/30 hover:border-primary hover:bg-primary/10">
+              <Link href={project.github} target="_blank">
+                <Github className="mr-2 h-4 w-4 transition-transform group-hover/btn:scale-110" />
+                View Code
+              </Link>
+            </Button>
+          )}
           {project.demo && (
             <Button size="sm" asChild className="glow">
               <Link href={project.demo} target="_blank">
@@ -215,6 +217,9 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
                 Live Demo
               </Link>
             </Button>
+          )}
+          {!project.github && !project.demo && (
+            <span className="text-sm text-muted-foreground font-mono">Private / Internal Project</span>
           )}
         </div>
 
