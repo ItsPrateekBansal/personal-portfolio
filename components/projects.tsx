@@ -1,6 +1,6 @@
 "use client"
 
-import { ExternalLink, Github, Bot, Utensils, Code } from "lucide-react"
+import { ExternalLink, Github, Bot, Utensils, Code, ShieldCheck, MessageSquare, Smartphone, FileText } from "lucide-react"
 import Link from "next/link"
 import { useRef, useState } from "react"
 import { useInView } from "framer-motion"
@@ -27,22 +27,94 @@ const projects = [
     architecture: "AI Agent → Code Analysis → Vulnerability Scan → Patch Generation → Notification",
   },
   {
-    title: "Thunder",
-    tagline: "AI Food Delivery Platform",
+    title: "Thunder Food",
+    tagline: "Campus Food Delivery Platform",
     badge: "Full-Stack + ML",
     badgeColor: "bg-primary/20 text-primary border-primary/30",
     icon: Utensils,
     description:
-      "A full-stack web app for campus food delivery with AI-driven recommendations and voice-assisted ordering.",
+      "A food delivery application following industrial Software Engineering practices with incremental model. Serves the campus food delivery ecosystem, boosting local economy.",
     details: [
-      "Implemented secure authentication with bcrypt password hashing",
-      "Integrated payment gateway with real-time order tracking dashboard",
-      "Built basic ML models for personalized food recommendations",
+      "Implemented secure authentication with real-time order tracking dashboard",
+      "Integrated payment gateway with personalized ML recommendations",
+      "Maintained proper project structure and documentation for scalability",
     ],
     stack: ["Node.js", "Express", "MongoDB", "React.js", "TailwindCSS", "ML"],
     github: "https://github.com/itsprateekbansal",
     demo: null,
     architecture: "React UI → Node API → MongoDB → ML Recommendations",
+  },
+  {
+    title: "Credit Card Fraud System",
+    tagline: "AI-Powered Fraud Detection",
+    badge: "Award Winner",
+    badgeColor: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
+    icon: ShieldCheck,
+    description:
+      "Won 3rd Prize at American Express CODESTREET 2020. An ML-based credit card fraud detection system using techniques from highly cited research papers.",
+    details: [
+      "Improved both security and transaction speed simultaneously",
+      "Implemented novel techniques from cutting-edge research papers",
+      "Thoroughly validated system with comprehensive testing",
+    ],
+    stack: ["Python", "Machine Learning", "Data Science", "Fraud Detection"],
+    github: null,
+    demo: null,
+    architecture: "Transaction Data → Feature Engineering → ML Model → Fraud Prediction",
+  },
+  {
+    title: "ChatKarloFrands",
+    tagline: "Real-Time Chat Application",
+    badge: "WebSocket",
+    badgeColor: "bg-blue-500/20 text-blue-400 border-blue-500/30",
+    icon: MessageSquare,
+    description:
+      "Basic real-time text-based communication web app with instant messaging capabilities.",
+    details: [
+      "Implementation based on Socket.io for real-time bidirectional communication",
+      "Built instant messaging with room-based chat features",
+      "Lightweight and responsive design",
+    ],
+    stack: ["Node.js", "Socket.io", "JavaScript", "HTML/CSS"],
+    github: "https://github.com/itsprateekbansal",
+    demo: null,
+    architecture: "Client → Socket.io → Server → Broadcast to Room",
+  },
+  {
+    title: "FUNFONE",
+    tagline: "Interactive Musical Dialer",
+    badge: "Mobile App",
+    badgeColor: "bg-pink-500/20 text-pink-400 border-pink-500/30",
+    icon: Smartphone,
+    description:
+      "A fun Flutter-based replica of toy phones from carnivals. Each dialer key is mapped to a particular song for instant playback.",
+    details: [
+      "Built with Flutter for cross-platform mobile experience",
+      "Each key triggers corresponding audio playback",
+      "Instant song switching on button tap",
+    ],
+    stack: ["Flutter", "Dart", "Audio API", "Mobile UI"],
+    github: "https://github.com/itsprateekbansal/FUNFONE",
+    demo: null,
+    architecture: "UI Dialer → Key Mapping → Audio Controller → Playback",
+  },
+  {
+    title: "ML Bone Implant Research",
+    tagline: "Academic Publication",
+    badge: "Research Paper",
+    badgeColor: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
+    icon: FileText,
+    description:
+      "Published research on integrating ML for predicting biomechanical properties of layered manufactured bone implants using XGBoost and Adaboost.",
+    details: [
+      "Evaluated various ML models including XGBoost and Adaboost",
+      "Dataset of 100 data points analyzing printing parameters",
+      "Guides biomedical engineers for enhanced orthopedic implants",
+    ],
+    stack: ["Python", "XGBoost", "Adaboost", "Machine Learning", "Data Science"],
+    github: null,
+    demo: "https://www.sciencedirect.com",
+    architecture: "Data Collection → Feature Analysis → ML Training → Prediction",
   },
 ]
 

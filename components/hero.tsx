@@ -114,7 +114,7 @@ export default function Hero() {
             </Button>
             <Button variant="outline" size="lg" asChild className="group border-primary/30 hover:border-primary hover:bg-primary/10">
               <a
-                href="https://drive.google.com/file/d/18XZO6bqSCPRszjQ_FLo9nw_LZKDEuZeR/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1eKIQBY5wdCngZqdY0xdxTsTLH2HSDNrk/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
