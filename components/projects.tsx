@@ -1,7 +1,6 @@
 "use client"
 
 import { ExternalLink, Github, Bot, Utensils, Code, ShieldCheck, MessageSquare, Smartphone, FileText } from "lucide-react"
-import Link from "next/link"
 import { useRef, useState } from "react"
 import { useInView } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
@@ -218,18 +217,18 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         <div className="px-6 py-4 border-t border-border/50 flex items-center gap-3">
           {project.github && (
             <Button variant="outline" size="sm" asChild className="group/btn border-primary/30 hover:border-primary hover:bg-primary/10">
-              <Link href={project.github} target="_blank">
+              <a href={project.github} target="_blank" rel="noreferrer">
                 <Github className="mr-2 h-4 w-4 transition-transform group-hover/btn:scale-110" />
                 View Code
-              </Link>
+              </a>
             </Button>
           )}
           {project.demo && (
             <Button size="sm" asChild className="glow">
-              <Link href={project.demo} target="_blank">
+              <a href={project.demo} target="_blank" rel="noreferrer">
                 <ExternalLink className="mr-2 h-4 w-4" />
                 Live Demo
-              </Link>
+              </a>
             </Button>
           )}
           {!project.github && !project.demo && (
